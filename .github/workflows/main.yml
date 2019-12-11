@@ -1,0 +1,27 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Fork Sync
+  uses: TG908/fork-sync@v1.1.4
+  with:
+    # Owner of the forked repository
+    owner: # optional
+    # Token for the github API
+    github_token: 
+    # Branch to track
+    head: # optional, default is master
+    # Branch to keep updated
+    base: # optional, default is master
+    # Merge method to use
+    merge_method: # optional, default is merge
+    # The title of the pull request
+    pr_title: # optional, default is Fork Sync
+    # The message in the pull request
+    pr_message: # optional
